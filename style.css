@@ -1,0 +1,92 @@
+:root{
+    --bg:#070606;
+    --card:#0f0f10;
+    --muted:#bfb8b0;
+    --gold:#caa14a;
+    --accent:#d4aa49;
+    --glass: rgba(255,255,255,0.04);
+    --maxw:1100px;
+    --radius:14px;
+  }
+  
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+    background:linear-gradient(180deg,#050505 0%, #0b0b0b 100%);
+    color:#fff;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .wrap{max-width:var(--maxw);margin:40px auto;padding:28px;}
+  
+  /* Header */
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px}
+  .brand{display:flex;gap:14px;align-items:center}
+  .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#b8862f);display:flex;align-items:center;justify-content:center;font-weight:700;color:#081;box-shadow:0 6px 18px rgba(202,161,74,0.12);font-size:20px}
+  h1{font-size:20px;margin:0}
+  .tag{color:var(--muted);font-size:13px}
+  nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+  nav a:hover{color:var(--gold)}
+  
+  /* Hero */
+  .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+  .hero-left{padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px}
+  .kicker{color:var(--gold);font-weight:700;letter-spacing:1px}
+  .hero-title{font-size:36px;margin:10px 0 8px}
+  .hero-desc{color:var(--muted);margin-bottom:18px}
+  .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,var(--gold),#d9b85a);color:#030; font-weight:700;text-decoration:none;box-shadow:0 8px 30px rgba(210,170,73,0.12)}
+  .secondary{margin-left:12px;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);color:var(--muted);text-decoration:none}
+  .hero-right{border-radius:14px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+  .hero-right img{width:100%;display:block;height:100%;object-fit:cover;filter:contrast(1.02) saturate(1.05)}
+  
+  /* Cards sections */
+  .section{margin-top:28px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:16px;transition:transform .28s ease, box-shadow .28s ease;cursor:pointer}
+  .card:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(0,0,0,0.6)}
+  .card h3{margin:8px 0 6px}
+  .muted{color:var(--muted);font-size:14px}
+  
+  /* Menu list */
+  .menu{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .dish{display:flex;gap:12px;align-items:center;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border-radius:10px}
+  .dish img{width:84px;height:64px;object-fit:cover;border-radius:8px}
+  .dish h4{margin:0}
+  .price{margin-left:auto;font-weight:700;color:var(--gold)}
+  
+  /* Gallery */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+  
+  /* Contact */
+  .contact-card{display:flex;gap:18px;padding:18px;border-radius:12px;align-items:center}
+  .contact-card .left{flex:1}
+  .contact-card form{display:flex;flex-direction:column;gap:10px}
+  input[type=text], input[type=email], textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:8px;color:#fff}
+  button[type=submit]{padding:12px 16px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--gold),#d9b85a);font-weight:700;cursor:pointer}
+  
+  /* Footer */
+  footer{margin-top:28px;padding:22px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));display:flex;justify-content:space-between;align-items:center}
+  
+  /* Hover pointer color change */
+  a, button, .card{transition:all .22s ease}
+  a:hover, button:hover{filter:brightness(1.04)}
+  
+  /* Responsive */
+  @media (max-width:980px){
+    .hero{grid-template-columns:1fr;}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .menu{grid-template-columns:1fr}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:560px){
+    .grid{grid-template-columns:1fr}
+    .gallery img{height:120px}
+    header{flex-direction:column;gap:10px}
+  }
+  
+  /* Small interactive accent following pointer */
+  .pointer-accent{position:fixed;pointer-events:none;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%
+    );background:linear-gradient(135deg,var(--accent),#d4aa49);box-shadow:0 6px 18px rgba(212,170,73,0.12);transition:transform .1s ease}
+  
