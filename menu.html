@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu — Le Petit Four</title>
+  <meta name="description" content="Carte & menu du restaurant Le Petit Four — entrées, plats, desserts et boissons." />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Le <span>Petit</span> Four</a>
+      <button class="nav-toggle" id="navToggle2" aria-label="ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="mainNav2">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="contact.html">Réservation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="menu-top">
+      <h1>Notre menu</h1>
+      <p>Plats imaginés autour des produits de saison — options végétariennes disponibles.</p>
+    </section>
+
+    <section class="menu-section">
+      <h2>Entrées</h2>
+      <div class="menu-list">
+        <div class="menu-item">
+          <h4>Tartare de saumon <span class="price">14 €</span></h4>
+          <p>Saumon, câpres, échalote, citron.</p>
+        </div>
+        <div class="menu-item">
+          <h4>Soupe de saison <span class="price">9 €</span></h4>
+          <p>Soupe maison avec pain au levain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2>Plats principaux</h2>
+      <div class="menu-list">
+        <div class="menu-item">
+          <h4>Poulet rôti <span class="price">18 €</span></h4>
+          <p>Mariné aux herbes, légumes de saison.</p>
+        </div>
+        <div class="menu-item">
+          <h4>Risotto crémeux <span class="price">16 €</span></h4>
+          <p>Riz arborio, parmesan, champignons.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2>Desserts</h2>
+      <div class="menu-list">
+        <div class="menu-item">
+          <h4>Tarte tatin <span class="price">7 €</span></h4>
+          <p>Pomme caramélisée, glace vanille.</p>
+        </div>
+        <div class="menu-item">
+          <h4>Crème brûlée <span class="price">8 €</span></h4>
+          <p>Crème onctueuse, caramel croquant.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="center"><a href="contact.html" class="btn primary">Réserver maintenant</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h4>Le Petit Four</h4><p>123 Rue de la Cuisine — Ville</p></div>
+      <div><h4>Suivez-nous</h4><p><a href="#">Instagram</a></p></div>
+      <div><h4>Heures</h4><p>Mar - Dim : 11:30 - 14:30 / 18:00 - 22:00</p></div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year2"></span> Le Petit Four — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
